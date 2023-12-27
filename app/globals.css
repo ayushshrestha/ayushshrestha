@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  overflow-x:hidden;
+}
+
+
+.animation-marquee
+ {
+  will-change: transform;
+  animation: marquee 20s linear infinite;
+ }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+   }
+   100% {
+    transform: translateX(-100%);
+   }
+ }
+
+
+ .animate-infinite--zoominout {
+    object-fit: cover;
+    object-position: center bottom;
+    animation: animteInfiniteZoomInOut 4s infinite alternate;
+ }
+
+ @keyframes animteInfiniteZoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+      transform: scale(1.2);
+  }
+ }
